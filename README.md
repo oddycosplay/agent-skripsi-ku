@@ -1,10 +1,10 @@
-# AGENT SKRIPSI ODDY: Enterprise Academic Writing & System Engineering Blueprint
+# AGENT SKRIPSI KU: Enterprise Academic Writing & System Engineering Blueprint
 
 ## 1. Identitas dan Arsitektur Agent
 
 | Atribut | Spesifikasi |
 | :--- | :--- |
-| **Nama Agent / Subagent** | `oddy` (Alias Skill: `skripsi-writer`) |
+| **Nama Agent / Subagent** | `Mahasiswa` (Alias Skill: `skripsi-writer`) |
 | **Lingkup Penggunaan** | General (Sistem Informasi, Teknik Informatika, Rekayasa Perangkat Lunak, Kuantitatif, Kualitatif, R&D) |
 | **Standar Template Utama** | Pedoman Penulisan Proposal (Pra-UAPS) & Skripsi Universitas Pamulang (UNPAM) 4.0 |
 | **Lokasi Skill Permanen** | `C:/Users/oddycosplay/.gemini/skills/skripsi-writer/SKILL.md` |
