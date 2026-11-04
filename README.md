@@ -1,124 +1,129 @@
+<div align="center">
+
 # Agent Skripsi Ku
 
-A domain-specific AI writing skill for academic research, thesis development, and technical documentation.
+### Asisten penulisan akademik berbasis AI untuk proses penelitian yang lebih terarah.
 
-`agent-skripsi-ku` is a reusable skill package designed to assist students, researchers, and academic writers in producing structured academic writing, literature analysis, system design documentation, and technical reports using AI assistance.
+Mendampingi penyusunan proposal dan skripsi, kajian pustaka, serta dokumentasi perancangan sistem dalam satu alur kerja yang terstruktur.
 
-## Overview
+[Mulai Menggunakan](#mulai-menggunakan) · [Fitur](#fitur-utama) · [Contoh Prompt](#contoh-prompt)
 
-This repository contains a custom skill named `skripsi-writer` for:
+</div>
 
-- proposal and thesis writing
-- academic paraphrasing and anti-sloppy writing workflow
-- literature review and research gap synthesis
-- citation and reference management
-- UML, ERD, and system engineering documentation
-- structured output aligned with academic writing standards
+---
 
-## What Is Included
+## Tentang Proyek
 
-- `AGENT_SKRIPSI_ODDY.md` — complete blueprint and guidance for academic writing and system engineering workflows
-- `skills/skripsi-writer/SKILL.md` — main reusable skill definition used by AI assistants
-- `LICENSE` — MIT license
+**Agent Skripsi Ku** adalah paket *skill* AI yang membantu mahasiswa dan peneliti mengelola pekerjaan akademik secara lebih sistematis. Proyek ini mengemas panduan penulisan, prinsip kejujuran akademik, dan dokumentasi rekayasa sistem dalam *skill* bernama `skripsi-writer`.
 
-## Repository Structure
+Skill ini dirancang sebagai pendamping proses, bukan pengganti penilaian akademik, arahan dosen pembimbing, maupun verifikasi sumber. Pengguna tetap bertanggung jawab memeriksa akurasi data, kutipan, referensi, dan kesesuaian naskah dengan pedoman institusi.
+
+## Fitur Utama
+
+- **Alur penulisan proposal dan skripsi:** panduan terstruktur dari Bab I hingga Bab V.
+- **Kajian pustaka dan sintesis penelitian:** membantu menyusun tinjauan penelitian terdahulu dan mengidentifikasi celah penelitian berdasarkan sumber yang dapat diverifikasi.
+- **Penulisan akademik:** mendukung parafrase, konsistensi istilah, dan penggunaan bahasa Indonesia formal. Hasil tetap perlu ditinjau dan disunting oleh penulis.
+- **Sitasi dan referensi:** mendukung pengelolaan sitasi dengan gaya APA, IEEE, dan acuan UNPAM.
+- **Dokumentasi sistem:** membantu menyusun artefak UML, ERD, rancangan basis data, serta skenario pengujian.
+- **Pemeriksaan konsistensi:** mendorong keselarasan antara masalah, tujuan, kebutuhan, rancangan, dan hasil penelitian.
+
+> **Catatan akademik:** Skill ini tidak menjamin skor kemiripan tertentu, kelulusan pemeriksaan plagiarisme, atau penerimaan naskah oleh institusi. Selalu cantumkan sumber yang benar dan ikuti kebijakan akademik yang berlaku.
+
+## Isi Repositori
 
 ```text
 agent-skripsi-ku/
 ├── README.md
 ├── LICENSE
 ├── AGENT_SKRIPSI_ODDY.md
-├── skills/
-│   └── skripsi-writer/
-│       └── SKILL.md
-└── .gitignore (if present in your local clone)
+└── skills/
+    └── skripsi-writer/
+        └── SKILL.md
 ```
 
-## Skill Location
+- [`AGENT_SKRIPSI_ODDY.md`](AGENT_SKRIPSI_ODDY.md): cetak biru fitur dan panduan penggunaan Agent Skripsi Oddy.
+- [`skills/skripsi-writer/SKILL.md`](skills/skripsi-writer/SKILL.md): definisi utama skill, alur kerja, dan aturan penulisan.
 
-The main skill definition is located at:
+## Mulai Menggunakan
 
-```text
-skills/skripsi-writer/SKILL.md
-```
-
-This file defines the academic workflow, writing rules, quality gates, and technical documentation expectations used by the assistant.
-
-## Quick Start
+Klon repositori ini:
 
 ```bash
 git clone https://github.com/oddycosplay/agent-skripsi-ku.git
 cd agent-skripsi-ku
 ```
 
-## Installation
-
 ### Gemini
+
+Salin folder skill ke direktori skill Gemini:
 
 ```bash
 mkdir -p ~/.gemini/skills
 cp -r skills/skripsi-writer ~/.gemini/skills/
 ```
 
-Windows PowerShell:
+Di Windows PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME/.gemini/skills" | Out-Null
 Copy-Item -Recurse -Force ".\skills\skripsi-writer" "$HOME/.gemini/skills/"
 ```
 
-Then open Gemini and select the `skripsi-writer` skill.
-
 ### Claude
+
+Salin folder skill ke direktori skill Claude:
 
 ```bash
 mkdir -p ~/.claude/skills
 cp -r skills/skripsi-writer ~/.claude/skills/
 ```
 
-Windows PowerShell:
+Di Windows PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME/.claude/skills" | Out-Null
 Copy-Item -Recurse -Force ".\skills\skripsi-writer" "$HOME/.claude/skills/"
 ```
 
-If your Claude client does not auto-detect the skill folder, copy the contents of `skills/skripsi-writer/SKILL.md` into custom instructions or project instructions manually.
+Jika klien Claude yang digunakan tidak mendeteksi folder tersebut secara otomatis, salin isi `skills/skripsi-writer/SKILL.md` ke instruksi khusus atau instruksi proyek.
 
 ### ChatGPT
 
-ChatGPT does not natively use the `SKILL.md` folder structure in the same way as Gemini or Claude. The recommended approach is:
+Untuk menggunakan panduan ini di GPT kustom atau proyek ChatGPT:
 
-1. Open ChatGPT and create a custom GPT or project.
-2. Open `Instructions` or `Custom Instructions`.
-3. Copy the content of `skills/skripsi-writer/SKILL.md`.
-4. Save and activate the GPT or project.
+1. Buka `skills/skripsi-writer/SKILL.md`.
+2. Salin isi file tersebut ke bagian instruksi GPT kustom atau proyek.
+3. Sesuaikan instruksi dengan kebutuhan dan kebijakan akademik yang berlaku.
 
-This allows the same methodology and writing rules to be applied within a custom AI assistant.
+Dukungan terhadap format folder `SKILL.md` dapat berbeda antarplatform. Periksa dokumentasi platform yang digunakan untuk metode pemasangan terbaru.
 
-## Example Prompts
+## Contoh Prompt
 
-- "Gunakan skill ini untuk menyusun BAB I proposal skripsi dengan judul ..."
-- "Buatkan tabel penelitian terdahulu dan analisis gap penelitian untuk topik ..."
-- "Buatkan use case, activity diagram, ERD, dan kebutuhan sistem untuk ..."
-- "Parafrasekan bab ini agar sesuai gaya ilmiah dan anti-plagiarism"
-- "Buatkan draf Bab III yang sesuai dengan template skripsi UNPAM 4.0"
+- “Gunakan skill ini untuk membantu menyusun kerangka Bab I proposal skripsi dengan judul …”
+- “Bantu analisis beberapa penelitian terdahulu berikut dan susun matriks perbandingannya.”
+- “Periksa keselarasan rumusan masalah, tujuan, dan batasan penelitian pada draf ini.”
+- “Bantu rancang use case, activity diagram, ERD, dan kebutuhan sistem berdasarkan requirement berikut.”
+- “Tinjau bahasa akademik pada bagian ini tanpa mengubah makna dan tanpa menambahkan fakta baru.”
 
-## Project Goal
+## Prinsip Penggunaan
 
-This project demonstrates how to build a specialized AI assistant for academic support by combining writing discipline, knowledge structure, and technical documentation in a reusable skill format.
+1. Berikan konteks penelitian, data, dan kebutuhan yang memadai sebelum meminta bantuan.
+2. Jangan meminta atau menggunakan referensi, data, maupun hasil penelitian yang tidak dapat diverifikasi.
+3. Verifikasi setiap sitasi dan klaim terhadap sumber aslinya.
+4. Tinjau kembali hasil AI, sesuaikan dengan pedoman kampus, dan konsultasikan keputusan akademik dengan dosen pembimbing.
 
-## Benefits
+## Kontribusi
 
-- structured academic writing workflow
-- stronger academic writing quality and anti-sloppy writing checks
-- reusable AI skill for thesis-related tasks
-- aligned with technical documentation standards for software/system projects
+Masukan untuk perbaikan dokumentasi, alur kerja, dan fitur sangat terbuka. Silakan buat *issue* untuk mendiskusikan usulan atau laporkan masalah melalui GitHub.
 
-## License
+## Lisensi
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+Proyek ini menggunakan lisensi MIT. Lihat [`LICENSE`](LICENSE) untuk informasi selengkapnya.
 
-## About
+---
 
-`agent-skripsi-ku` is a practical implementation of a domain-specific AI writing system designed to support research workflows in an organized, reusable, and scalable manner.
+<div align="center">
+
+**Agent Skripsi Ku** · *Menata proses akademik, satu langkah lebih terarah.*
+
+</div>
