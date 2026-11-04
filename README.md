@@ -2,30 +2,24 @@
 
 A domain-specific AI writing skill for academic research, thesis development, and technical documentation.
 
-Agent Skripsi Ku is a custom skill package designed to support students and researchers in producing structured academic writing, literature analysis, and system design documentation using AI assistants such as Gemini, Claude, and ChatGPT.
+`agent-skripsi-ku` is a reusable skill package designed to assist students, researchers, and academic writers in producing structured academic writing, literature analysis, system design documentation, and technical reports using AI assistance.
 
 ## Overview
 
-This project packages a reusable skill named `skripsi-writer` for:
-- thesis and proposal writing
+This repository contains a custom skill named `skripsi-writer` for:
+
+- proposal and thesis writing
 - academic paraphrasing and anti-sloppy writing workflow
 - literature review and research gap synthesis
 - citation and reference management
 - UML, ERD, and system engineering documentation
 - structured output aligned with academic writing standards
 
-## Why This Project?
+## What Is Included
 
-Many academic workflows still rely on manual, repetitive writing processes. This project aims to create a more intelligent, structured, and reusable writing assistant that helps researchers convert raw ideas into coherent academic outputs with clearer logic and stronger documentation quality.
-
-## Key Features
-
-- End-to-end academic writing workflow from chapter I to chapter V
-- Research question and objective formulation support
-- Literature review and related work synthesis
-- Academic paraphrasing aligned with formal language standards
-- Technical documentation support for UML, ERD, and system design
-- Ready-to-install skill structure for supported AI environments
+- `AGENT_SKRIPSI_ODDY.md` — complete blueprint and guidance for academic writing and system engineering workflows
+- `skills/skripsi-writer/SKILL.md` — main reusable skill definition used by AI assistants
+- `LICENSE` — MIT license
 
 ## Repository Structure
 
@@ -37,18 +31,18 @@ agent-skripsi-ku/
 ├── skills/
 │   └── skripsi-writer/
 │       └── SKILL.md
-└── references/
+└── .gitignore (if present in your local clone)
 ```
 
 ## Skill Location
 
-The main skill file is located at:
+The main skill definition is located at:
 
 ```text
 skills/skripsi-writer/SKILL.md
 ```
 
-This skill defines the writing workflow and academic rules used by the assistant.
+This file defines the academic workflow, writing rules, quality gates, and technical documentation expectations used by the assistant.
 
 ## Quick Start
 
@@ -95,12 +89,12 @@ If your Claude client does not auto-detect the skill folder, copy the contents o
 
 ChatGPT does not natively use the `SKILL.md` folder structure in the same way as Gemini or Claude. The recommended approach is:
 
-1. Open ChatGPT and create a custom GPT or project
-2. Open `Instructions` or `Custom Instructions`
-3. Copy the content of `skills/skripsi-writer/SKILL.md`
-4. Save and activate the GPT/project
+1. Open ChatGPT and create a custom GPT or project.
+2. Open `Instructions` or `Custom Instructions`.
+3. Copy the content of `skills/skripsi-writer/SKILL.md`.
+4. Save and activate the GPT or project.
 
-This allows the same methodology and writing rules to be used in a custom AI assistant.
+This allows the same methodology and writing rules to be applied within a custom AI assistant.
 
 ## Example Prompts
 
@@ -108,10 +102,18 @@ This allows the same methodology and writing rules to be used in a custom AI ass
 - "Buatkan tabel penelitian terdahulu dan analisis gap penelitian untuk topik ..."
 - "Buatkan use case, activity diagram, ERD, dan kebutuhan sistem untuk ..."
 - "Parafrasekan bab ini agar sesuai gaya ilmiah dan anti-plagiarism"
+- "Buatkan draf Bab III yang sesuai dengan template skripsi UNPAM 4.0"
 
 ## Project Goal
 
-This project demonstrates how to build a specialized AI assistant for academic support, combining writing discipline, knowledge structure, and technical documentation in a reusable skill format.
+This project demonstrates how to build a specialized AI assistant for academic support by combining writing discipline, knowledge structure, and technical documentation in a reusable skill format.
+
+## Benefits
+
+- structured academic writing workflow
+- stronger academic writing quality and anti-sloppy writing checks
+- reusable AI skill for thesis-related tasks
+- aligned with technical documentation standards for software/system projects
 
 ## License
 
@@ -119,4 +121,4 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 ## About
 
-`agent-skripsi-ku` is a practical implementation of a domain-specific AI writing system, designed to support research workflows in an organized, reusable, and scalable manner.
+`agent-skripsi-ku` is a practical implementation of a domain-specific AI writing system designed to support research workflows in an organized, reusable, and scalable manner.
